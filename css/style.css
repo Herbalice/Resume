@@ -79,6 +79,13 @@ body {
   background: rgba(255, 255, 255, .7);
   filter:alpha(opacity=70);
 }
+.overlay-line-color-255 { /* 背景：線性漸層 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fbfbfb+0,fbfbfb+100&0+0,1+78 */
+  background: -moz-linear-gradient(top, rgba(251,251,251,0) 0%, rgba(251,251,251,0) 0%, rgba(251,251,251,1) 45%, rgba(251,251,251,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(251,251,251,0) 0%,rgba(251,251,251,0) 0%,rgba(251,251,251,1) 45%,rgba(251,251,251,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(251,251,251,0) 0%,rgba(251,251,251,0) 0%,rgba(251,251,251,1) 45%,rgba(251,251,251,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fbfbfb', endColorstr='#fbfbfb',GradientType=0 ); /* IE6-9 */  /*background: rgba(0, 0, 0, .4);*/
+}
 .offset-text{
   position: absolute;
 }
@@ -92,7 +99,7 @@ body {
  * =======================
  */
 .navbar-brand {
-  float: right;
+  float: left;
 }
 .main-navbar-top {
   border: 0px solid;
@@ -409,29 +416,13 @@ body {
 .work-section-1 .section-separator{
   padding-top: 270px;
 }
-@media (min-width: 1500px) {
-  .work-section-1 .section-separator{
-  padding-top: 20%;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .work-section-1 .section-separator{
-  padding-top: 100px;
-  }
-}
-@media (max-width: 767px) {
-  .work-section-1 .section-separator{
-  padding-top: 50px;
-  }
-}
 .work-section-1 img[alt="kun-s"]{
   padding: 1px;
-/*  margin-left: auto;
-  margin-right: auto;*/
-  margin-bottom: 50px;
-  border: 5px solid rgba(255, 255, 255, 1);
+  margin-top: 120px;
+  margin-bottom: 0;
+  border: .2rem solid rgba(255, 255, 255, 1);
   border-radius: 50%;
-  max-width: 250px;
+  max-width: 100%;
   box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.8);
 }
 .work-section-1 img[alt="kun"]{
@@ -487,6 +478,27 @@ body {
 .experience dd {
   margin-left: 120px;
 }
+@media (min-width: 1500px) {
+  .work-section-1 .section-separator{
+  padding-top: 20%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .work-section-1 .section-separator{
+  padding-top: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .work-section-1 .section-separator{
+  padding-top: 50px;
+  }
+  .experience dt {
+  float: none;
+  }
+  .experience dd {
+  margin-left: 10px;
+  }
+}
 
 
 /**
@@ -531,3 +543,247 @@ body {
   margin-top: 1.5%;
   margin-bottom: 10px;
 }
+
+
+/**
+ * =======================
+ * portfolio Section
+ * =======================
+ */
+.bg-image-4{
+  background: url(../images/header-bg02.jpg) no-repeat #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+}
+.portfolio-section{
+  background: url(../images/portfolio-bg01.png) #f4f4f4;
+}
+.portfolio-section .container{
+  /*max-width: 930px;*/
+}
+.portfolio-section .section-separator{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+/*=== star Grid CSS ===*/
+.og-grid {
+  list-style: none;
+  /*padding: 20px 0;*/
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.og-grid li {
+  display: inline-block;
+  margin: 10px 5px;
+  vertical-align: top;
+  /*height: 250px;*/
+}
+.og-grid li > a{
+  border: none;
+  outline: none;
+  display: block;
+  position: relative;
+}
+.og-grid li img{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 0.5em #e6e6e6 inset, 0 0 0 1px #d4d4d4;
+  -moz-box-shadow: 0 0 0.5em #e6e6e6 inset,0 0 0 1px #d4d4d4;
+  -o-box-shadow: 0 0 0.5em #e6e6e6 inset, 0 0 0 1px #d4d4d4;
+  box-shadow: 0 0 0.5em #e6e6e6 inset, 0 0 0 1px #d4d4d4;
+}
+.og-grid li > a img{
+  background: #fff;
+  padding: 10px;
+  max-width: 270px;
+  /*設定外面圖片高度   圖片比例1.9:1*/
+  /*height: 142px;*/
+}
+.og-grid li > a img:hover{
+  -webkit-box-shadow: 0 0 0 1px #d4d4d4, 0 0 20px 5px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 0 0 1px #d4d4d4, 0 0 20px 5px rgba(0, 0, 0, 0.08);
+  -o-box-shadow: 0 0 0 1px #d4d4d4, 0 0 20px 5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 0 1px #d4d4d4, 0 0 20px 5px rgba(0, 0, 0, 0.08);
+}
+/*三角形箭頭*/
+.og-grid li.og-expanded > a::after {
+  top: auto;
+  border: solid transparent;
+  border-bottom-color: rgba(255,255,255, .8);
+  border-width: 15px;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  margin: -20px 0 0 -15px;
+}
+/*grid's plugins框框  開始*/
+.og-expander {
+  position: absolute;
+  background: rgba(255,255,255, .8);
+  top: auto;
+  left: 0;
+  width: 100%;
+  margin-top: 10px;
+  text-align: left;
+  /*height: 0;*/
+  overflow: hidden;
+}
+.og-expander-inner {
+  padding: 50px 30px;
+  height: 100%;
+}
+/*close 按鈕 開始*/
+.og-close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.og-close::before, .og-close::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: 1px;  /*close粗細*/
+  background: #888;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.og-close::after { /*覆蓋改-45度 左下-右上 */
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.og-close:hover::before, .og-close:hover::after {
+  background: #c42f2f;
+}
+/* img+details  開始*/
+.og-fullimg, .og-details {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.og-details {
+  width: 55%;
+  padding: 0 40px 0 20px;
+}
+.og-fullimg {  
+  width: 45%;
+  text-align: right;
+}
+.og-fullimg img {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+}
+.og-details h3 {
+  font-weight: 900;
+  font-size: 25px;
+  color: #f8981d;
+  /*padding: 40px 0 10px 0;*/
+  margin-bottom: 10px;
+  position: relative;
+}
+/* website 浮動背景*/
+.og-details div span{
+  font-weight: 900;
+  font-size: 100px;
+  /*color: #f3f3f3;*/
+  color: #fff;
+  text-shadow: -1px -2px 0px #e8e8e8;
+  /*opacity: 0.3;*/
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  font-style: italic;
+}
+.og-details div {
+  padding-left: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+}
+/* view website 開始 */
+.og-details a {
+  font-weight: 500;
+  font-size: 16px;
+  color: #d6d6d6;
+  background: #f5f5f5;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 5px 10px;
+  /*border: 3px solid #333;*/
+  display: inline-block; /* 設定inline-block/block才可以讓框框不重疊 */
+  margin: 30px 0 0 3%;
+  outline: none;
+}
+.og-details a::before { /* 箭頭 → */
+  content: '\2192';
+  display: inline-block;
+  margin-right: 10px;
+}
+.og-details a:hover {
+  border-color: #999;
+  color: #fff;
+  background: #2a8787;
+}
+/* 圖片載入loading */
+.og-loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ddd;
+  box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  -webkit-animation: loader 0.5s infinite ease-in-out both;
+  -moz-animation: loader 0.5s infinite ease-in-out both;
+  animation: loader 0.5s infinite ease-in-out both;
+}
+@-webkit-keyframes loader {
+  0% { background: #ddd; }
+  33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+@-moz-keyframes loader {
+  0% { background: #ddd; }
+  33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+@keyframes loader {
+  0% { background: #ddd; }
+  33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@media screen and (max-width: 830px) {
+  .og-expander h3{ font-size: 32px; }
+  .og-expander p{ font-size: 13px; }
+  .og-expander a{ font-size: 12px; }
+}
+@media screen and (max-width: 650px) {
+  .og-fullimg{ display: none; }
+  .og-details{ float: none; width: 100%; }
+  
+  .og-details div span{font-weight: 300;font-size: 25px;} 
+}
+/*=== end Grid CSS ===*/
