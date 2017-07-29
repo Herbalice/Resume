@@ -429,10 +429,10 @@ body {
   padding: 2px;
   margin-right: 10%;
   /*margin-bottom: 50px;*/
-  border: 2px solid rgba(253, 253, 253, 1); 
-  max-width: 250px;
-  box-shadow: 25px 50px 5px 0 rgba(233, 234, 236, .7);
-  /*max-height: 100px;*/
+  /*border: 2px solid rgba(253, 253, 253, 1);*/
+  border-radius: 20px;
+  max-width: 100%;
+  box-shadow: 0px 35px 11px -20px rgba(220, 220, 220, 0.7);
 }
 .work-section-1 h6{
   font-family: 'Gotham light';
@@ -447,7 +447,6 @@ body {
 }
 .work-section-1 h6 ~ p{
   line-height: 23px;
-  font-style: italic;
 }
 .work-section-1 span a{
   font-size: 14px;
@@ -462,11 +461,11 @@ body {
   color: #c23f15;
 }
 .work-section-1 .experience{
-  font-style: italic;  
   line-height: 23px;
 }
 .experience dt {
   color: #ababab;
+  font-style: italic;
   float: left;
   width: 120px;
   overflow: hidden;
@@ -583,7 +582,14 @@ body {
   display: inline-block;
   margin: 10px 5px;
   vertical-align: top;
+  width: 31%;
   /*height: 250px;*/
+}
+.og-grid ol li {
+  margin: 0 0 0 6px;
+  width: 100%;
+  display: list-item;
+  list-style-type: decimal;
 }
 .og-grid li > a{
   border: none;
@@ -604,7 +610,7 @@ body {
 .og-grid li > a img{
   background: #fff;
   padding: 10px;
-  max-width: 270px;
+  max-width: 100%;
   /*設定外面圖片高度   圖片比例1.9:1*/
   /*height: 142px;*/
 }
@@ -613,6 +619,7 @@ body {
   -moz-box-shadow: 0 0 0 1px #d4d4d4, 0 0 20px 5px rgba(0, 0, 0, 0.08);
   -o-box-shadow: 0 0 0 1px #d4d4d4, 0 0 20px 5px rgba(0, 0, 0, 0.08);
   box-shadow: 0 0 0 1px #d4d4d4, 0 0 20px 5px rgba(0, 0, 0, 0.08);
+  margin-top: -2px;
 }
 /*三角形箭頭*/
 .og-grid li.og-expanded > a::after {
@@ -785,5 +792,12 @@ body {
   .og-details{ float: none; width: 100%; }
   
   .og-details div span{font-weight: 300;font-size: 25px;} 
+}
+@media (max-width: 767px) {
+  .og-grid li{ width: 47%; }
+}
+@media (max-width: 431px) {
+  .og-grid li{ width: 85%; }
+  .og-expander h3{ font-size: 23px; }
 }
 /*=== end Grid CSS ===*/
