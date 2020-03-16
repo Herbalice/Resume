@@ -477,6 +477,9 @@ body {
 .experience dd {
   margin-left: 120px;
 }
+.experience dt:first-child, .experience dd:nth-child(2) {
+    color: #ff6536;
+}
 @media (min-width: 1500px) {
   .work-section-1 .section-separator{
   padding-top: 20%;
