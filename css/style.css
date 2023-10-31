@@ -467,7 +467,7 @@ body {
   color: #ababab;
   font-style: italic;
   float: left;
-  width: 120px;
+  width: 140px;
   overflow: hidden;
   clear: left;
   text-align: left;
@@ -733,8 +733,8 @@ body {
 .og-details a {
   font-weight: 500;
   font-size: 16px;
-  color: #d6d6d6;
-  background: #f5f5f5;
+  color: #fff;
+  background: #a5a5a5;
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -743,6 +743,7 @@ body {
   display: inline-block; /* 設定inline-block/block才可以讓框框不重疊 */
   margin: 30px 0 0 3%;
   outline: none;
+  font-style: italic;
 }
 .og-details a::before { /* 箭頭 → */
   content: '\2192';
